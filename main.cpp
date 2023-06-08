@@ -31,5 +31,6 @@ int main()
         DataSource1D donnees = ech.getDataSource();
         EtudeStatistique1D etud(donnees);
         etud.getDataSource().Affiche();
+        etud.Affiche();
     }
 }

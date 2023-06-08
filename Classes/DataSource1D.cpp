@@ -2,16 +2,18 @@
 
 DataSource1D::DataSource1D()
 {
+    _size = 10;
     for(int i=0; i<10; i++)
     {
         setDonnee(i, 0);
     }
     setEffectifTotal(0);
+    
 }
 
 void DataSource1D::setDonnee(int indice, int val)
 {
-    donnees[indice] = val;   
+    donnees[indice] = val;
 }
 
 void DataSource1D::setEffectifTotal(int val)
@@ -59,7 +61,9 @@ void DataSource1D::Affiche() const
     cout << "Affichage du DataSource1D" << endl;
     for(int i=0; i<10; i++)
     {
-        cout << "Indice " << i << ": " << donnees[i] << endl;
+        cout << "Nombre d'etoiles : " << (i+1) << ", Nombre d'apparitions : " << donnees[i] << endl;
     }
     cout << "Effectif total : " << getEffectifTotal() << endl;
 }
+
+int DataSource1D::size() { return _size; }

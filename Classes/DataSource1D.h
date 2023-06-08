@@ -10,6 +10,8 @@ class DataSource1D
         int donnees[10];
         int effectifTotal;
 
+        int _size;
+
         void setDonnee(int indice, int val);
         void setEffectifTotal(int val);
 
@@ -23,6 +25,8 @@ class DataSource1D
         int getEffectifTotal() const;
 
         void Affiche() const;
+
+        int size();
 };
 
 #endif
